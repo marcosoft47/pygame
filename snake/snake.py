@@ -36,10 +36,9 @@ pontos = 0
 gameover= fonte.render('Melhore Aperte R para recomecar', True, (255,255,255))
 recomecar = True
 
-musica = pygame.mixer.music.load('badtime/sans_undertale.ogg')
+musica = pygame.mixer.music.load('sans_undertale.ogg')
 pygame.mixer.music.play(-1)
-rapaz = pygame.mixer.Sound('badtime/rapaz.ogg')
-som = pygame.mixer.Sound('badtime/snd_hurt1.wav')
+som = pygame.mixer.Sound('snd_hurt1.wav')
 gitgud = pygame.mixer.Sound('gameover.ogg')
 contar = 0
 
@@ -126,8 +125,6 @@ while running:
             x_maca = random.randint(0, largura-size)
             y_maca = random.randint(0, altura-size)
             som.play()
-            if pontos == 69:
-                rapaz.play()
         snake = pygame.draw.rect(tela, cor_snake, (x,y,size,size))
         maca = pygame.draw.rect(tela, (255,0,0), (x_maca,y_maca,size,size))
     else:
